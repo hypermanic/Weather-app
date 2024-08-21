@@ -1,0 +1,23 @@
+<!-- views/weather.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Add error handling here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% }else{ %>
+    <title>Weather for <%= weather.name %></title>
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
+</head>
+<body>
+    <div style="margin: auto;width: 500px;">
+    <h1>Weather in <%= weather.name %></h1>
+    <p>Temperature: <%= weather.main.temp %>°C</p>
+    <p>Weather: <%= weather.weather[0].description %></p>
+    <a href="/">Check another city</a>
+    <% } %>
+</div>
+</body>
+</html>
